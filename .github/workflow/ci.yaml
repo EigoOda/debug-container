@@ -1,13 +1,9 @@
 name: Release docker image
 
 on:
-  pull_request:
+  push:
     branches:
-      - "master"
-    type:
-      - opend
-      - synchronize
-      - closed
+      - "main"
 
 jobs:
   release:
