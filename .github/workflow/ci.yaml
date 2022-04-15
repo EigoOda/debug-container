@@ -3,12 +3,12 @@ name: Release docker image
 on:
   push:
     branches:
-      - "main"
+      - main
 
 jobs:
   release:
-    name: Release docker image
     runs-on: ubuntu-latest
+    env: IMAGE_NAME: $${ github.repository }
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
