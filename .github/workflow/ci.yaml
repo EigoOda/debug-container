@@ -1,0 +1,33 @@
+name: Release docker image
+
+on:
+  pull_request:
+    branches:
+      - "master"
+    type:
+      - opend
+      - synchronize
+      - closed
+
+jobs:
+  release:
+    name: Release docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+
+      - name: Log in to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          passowrd: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:0.1
+
