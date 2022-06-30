@@ -26,5 +26,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:0.1
+          tags: ghcr.io/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latset
 
