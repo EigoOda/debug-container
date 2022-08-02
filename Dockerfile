@@ -10,6 +10,6 @@ RUN set -x && \
       curl \
       git \
       mysql-client \
-      vim
+      neovim
 
 SHELL ["/bin/bash", "-c"]
