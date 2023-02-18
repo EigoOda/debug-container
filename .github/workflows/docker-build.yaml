@@ -9,7 +9,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${{ github.repository }}
+      IMAGE_NAME: debug-container
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
