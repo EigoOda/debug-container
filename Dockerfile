@@ -10,6 +10,7 @@ RUN set -x && \
       curl \
       git \
       mysql-client \
-      neovim
+      neovim \
+      dnsutils
 
 SHELL ["/bin/bash", "-c"]
