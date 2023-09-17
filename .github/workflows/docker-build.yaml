@@ -12,7 +12,7 @@ jobs:
       IMAGE_NAME: debug-container
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Log in to Github Container Registry
         uses: docker/login-action@v2
