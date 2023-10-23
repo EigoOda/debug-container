@@ -9,7 +9,7 @@ RUN set -x && \
       ca-certificates \
       curl \
       git \
-      mysql-client \
+      iputils-ping \
       neovim \
       dnsutils
 
